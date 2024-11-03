@@ -21,7 +21,7 @@ public class healthBar : MonoBehaviour
     {
         bar.fillAmount = Mathf.Clamp(health/maxHealth, 0 ,1);
     }
-    void onCollisionEnter(Collider collision)
+    void OnCollisionEnter(Collision collision)
     {
         TakeDamage(damageAmount);
     }
