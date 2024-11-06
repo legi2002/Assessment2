@@ -9,6 +9,7 @@ public class WheelControlScript : MonoBehaviour
 {
     public Transform wheelTransform;
     public WheelCollider wheelCollider;
+    private ParticleSystem tireSmoke;
 
     public bool isSteerable;
     public bool isDriveWheel;
@@ -18,6 +19,9 @@ public class WheelControlScript : MonoBehaviour
     
     void Start() {
         wheelCollider = GetComponent<WheelCollider>();
+        if (isDriveWheel) {
+            tireSmoke = GetComponentInChildren<ParticleSystem>();
+        }
     }
 
     void Update() {
