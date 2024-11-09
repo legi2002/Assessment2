@@ -17,6 +17,7 @@ public class CarControl : MonoBehaviour
 
     public AudioSource engineSound;
     public AudioSource brakeSound;
+    public GameOverScript Over;
 
     Rigidbody rb;
 

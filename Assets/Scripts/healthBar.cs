@@ -7,7 +7,8 @@ public class healthBar : MonoBehaviour
 {
     public float health = 100.0f;
     public float maxHealth = 100.0f;
-    public Image bar;
+    public Slider healthSlider;
+    public GameOverScript overScreen;
     public float damageAmount = 10.0f;
     
     // Start is called before the first frame update
@@ -19,7 +20,14 @@ public class healthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bar.fillAmount = Mathf.Clamp(health/maxHealth, 0 ,1);
+        if(healthSlider != null)
+        {
+            healthSlider.value = health;
+        }
+        if(health <= 0)
+        {
+            GameOver();
+        }
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -28,7 +36,14 @@ public class healthBar : MonoBehaviour
     public void TakeDamage(float amount)
     {
         health -= amount;
-        health = Mathf.Clamp(health, 0, maxHealth);
-        Debug.Log(health);
+        if(healthSlider != null)
+        {
+            healthSlider.value = health;
+        }
+    }
+
+    public void GameOver()
+    {
+        overScreen.Setup();
     }
 }
