@@ -375,6 +375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free Racing Car Gray Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3311311803080157842, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: m_TagString
+      value: Police
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -475,6 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b187133948fb64c9c102331b770bff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!4 &7951749605284508683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2792218741957914664, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
